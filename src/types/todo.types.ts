@@ -1,5 +1,4 @@
-
-export interface Todo {
+export interface BaseTodo {
   id: string;
   name: string;
   completed: boolean;
@@ -11,8 +10,6 @@ export interface StateStore {
   };
   todoList: Todo[];
 }
-export interface TodoProps {
-  id:string;
-  name: string;
-  completed:boolean;
-}
+export type Todo = BaseTodo;
+export type TodoProps = BaseTodo;
+
