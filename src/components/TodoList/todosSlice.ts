@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { Todo } from "../../types/todo.types";
+const initialState: Todo[] = [
+  { id: "1", name: "Viec 1", completed: false },
+  { id: "2", name: "Viec 2", completed: true },
+  { id: "3", name: "Viec 3", completed: false },
+];
 const todoSlice = createSlice({
   name: "todoList",
-  initialState: [
-    { id: "1", name: "Viec 1", completed: false },
-    { id: "2", name: "Viec 2", completed: true },
-    { id: "3", name: "Viec 3", completed: false },
-  ],
+  initialState,
   reducers: {
     addTodo: (state, action) => {
       state.push(action.payload);

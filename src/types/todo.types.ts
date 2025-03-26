@@ -4,12 +4,14 @@ export interface BaseTodo {
   completed: boolean;
 }
 export interface StateStore {
-  filters: {
-    search: string;
-    status: string;
-  };
+  filters:FilterTodo;
   todoList: Todo[];
 }
+export interface FilterTodo {
+  search: string;
+  status: string;
+}
+export type FilterStatus = 'All' | 'Completed' | 'Todo' ;
 export type Todo = BaseTodo;
 export type TodoProps = BaseTodo;
 

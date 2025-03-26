@@ -1,11 +1,11 @@
-import { Todo } from "../Todo/Todo";
+import { TodoItem } from "../TodoItem/TodoItem";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import { todoRemainingSlector } from "../../redux/selectors";
 import { addTodo } from "./todosSlice";
 export const TodoList = () => {
-  const [todoName, setTodoName] = useState("");
+  const [todoName, setTodoName] = useState<string>("");
   const todoList = useSelector(todoRemainingSlector);
   const dispatch = useDispatch();
 
@@ -24,7 +24,7 @@ export const TodoList = () => {
     <div className="h-90 flex flex-col justify-between">
       <div>
         {todoList.map((todo) => (
-          <Todo
+          <TodoItem
             key={todo.id}
             id={todo.id}
             name={todo.name}

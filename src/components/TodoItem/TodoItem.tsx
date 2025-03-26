@@ -4,11 +4,11 @@ import { TodoProps } from "../../types/todo.types";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { toggleTodoStatus, deleteTodo, editTodo } from "../TodoList/todosSlice";
-
-export const Todo = ({ id, name, completed }: TodoProps) => {
+import { memo } from "react";
+export const TodoItem = ({ id, name, completed }: TodoProps) => {
   const dispatch = useDispatch();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedName, setEditedName] = useState(name);
+  const [isEditing, setIsEditing] = useState<boolean>(false);
+  const [editedName, setEditedName] = useState<string>(name);
 
   const handleCheckboxChange = () => {
     dispatch(toggleTodoStatus(id));
@@ -84,3 +84,4 @@ export const Todo = ({ id, name, completed }: TodoProps) => {
     </div>
   );
 };
+export default memo(TodoItem);

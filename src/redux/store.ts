@@ -1,4 +1,4 @@
-import filterReducer from '../components/Filters/filterSlice';
+import filterReducer from '../components/FilterTodoList/filterTodoListSlice';
 import todoReducer from '../components/TodoList/todosSlice';
 import { configureStore } from "@reduxjs/toolkit";
 
