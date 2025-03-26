@@ -36,7 +36,7 @@ export const TodoList = () => {
       <div className="flex mb-4 mt-auto">
         <input
           type="text"
-          placeholder="input search text"
+          placeholder="input add todo"
           className="w-full outline-none px-2.5 py-1 border-gray-200 border-1"
           value={todoName}
           onChange={(e) => setTodoName(e.target.value)}
