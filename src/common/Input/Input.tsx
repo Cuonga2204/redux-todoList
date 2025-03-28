@@ -1,13 +1,12 @@
 import React from "react";
 import { InputProps } from "../../types/todo.types";
-
-export const Input: React.FC<InputProps> = ({
+import { memo } from "react";
+const Input: React.FC<InputProps> = ({
   id,
   name,
   value,
   placeholder,
   onChange,
-
   className,
 }) => {
   return (
@@ -22,3 +21,4 @@ export const Input: React.FC<InputProps> = ({
     />
   );
 };
+export default memo(Input);

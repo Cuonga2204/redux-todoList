@@ -1,6 +1,5 @@
 import React from "react";
 import { RadioProps } from "../../types/todo.types";
-
 const Radio: React.FC<RadioProps> = ({
   id,
   name,

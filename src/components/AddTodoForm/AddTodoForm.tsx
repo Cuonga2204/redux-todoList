@@ -1,4 +1,4 @@
-import { Input } from "../../common/Input/Input";
+import  Input  from "../../common/Input/Input";
 import Button from "../../common/Button/Button";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/slices/todosSlice";
