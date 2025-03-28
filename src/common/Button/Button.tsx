@@ -2,8 +2,6 @@ import React from 'react'
 import { ButtonProps } from '../../types/todo.types'
 import { memo } from 'react';
  const Button:React.FC<ButtonProps> = ({onClick, disabled=false, className, children}) => {
-    console.log('re-render button');
-    
     return (
     <button
       onClick={onClick}

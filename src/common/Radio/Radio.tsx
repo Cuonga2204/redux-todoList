@@ -10,8 +10,7 @@ const Radio: React.FC<RadioProps> = ({
   containerClassName,
   label,
 }) => {
-  console.log('re-render radio');
-  
+
   return (
     <div className={containerClassName}>
       <input
