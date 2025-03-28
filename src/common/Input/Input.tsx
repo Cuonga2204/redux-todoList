@@ -9,6 +9,7 @@ const Input: React.FC<InputProps> = ({
   onChange,
   className,
 }) => {
+
   return (
     <input
       type="text"

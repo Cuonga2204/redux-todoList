@@ -10,16 +10,16 @@ const TodoItem = ({ id, name, completed }: TodoProps) => {
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
-  const handleCheckboxChange = () => {
+  const handleCheckboxChange = (): void => {
     dispatch(toggleTodoStatus(id));
     setIsEditing(false);
   };
 
-  const handleDelete = () => {
+  const handleDelete = (): void => {
     dispatch(deleteTodo(id));
   };
 
-  const handleEditToggle = () => {
+  const handleEditToggle = (): void => {
     setIsEditing(true);
   };
 
