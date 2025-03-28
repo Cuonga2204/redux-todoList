@@ -1,11 +1,11 @@
-import filterReducer from '../components/FilterTodoList/filterTodoListSlice';
-import todoReducer from '../components/TodoList/todosSlice';
+import filterReducer from "./slices/filterTodoListSlice";
+import todoReducer from "./slices/todosSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({
-    reducer:{
-        filters:filterReducer,
-        todoList:todoReducer
-    }
-})
+  reducer: {
+    filters: filterReducer,
+    todoList: todoReducer,
+  },
+});
 export default store;

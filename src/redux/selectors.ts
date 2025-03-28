@@ -17,7 +17,9 @@ export const todoRemainingSlector = createSelector(
       }
       return (
         todo.name.includes(searchText) &&
-        (status === FILTER_STATUSES.COMPLETED ? todo.completed : !todo.completed)
+        (status === FILTER_STATUSES.COMPLETED
+          ? todo.completed
+          : !todo.completed)
       );
     });
   }
