@@ -8,7 +8,6 @@ import { useCallback } from "react";
 export const AddTodoForm = () => {
   const [todoName, setTodoName] = useState<string>("");
   const dispatch = useDispatch();
-
   const handleAddTodo = useCallback(() => {
     if (!todoName.trim()) return;
     dispatch(

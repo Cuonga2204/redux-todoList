@@ -6,7 +6,7 @@ import { searchFilter } from "../../redux/slices/filterTodoListSlice";
 import { statusFilter } from "../../redux/slices/filterTodoListSlice";
 import { FILTER_STATUSES } from "../../constants/filter.constants";
 import { FilterStatus } from "../../types/todo.types";
-import  Input  from "../../common/Input/Input";
+import Input from "../../common/Input/Input";
 import Radio from "../../common/Radio/Radio";
 import { memo } from "react";
 

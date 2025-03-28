@@ -58,7 +58,6 @@ const TodoItem = ({ id, name, completed }: TodoProps) => {
         className="ml-2.5 text-red-400 cursor-pointer"
         onClick={handleDelete}
       />
-      {/* </div> */}
     </div>
   );
 };
