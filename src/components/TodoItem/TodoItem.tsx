@@ -6,7 +6,7 @@ import { useState } from "react";
 import { EditTodoForm } from "../EditTodoForm/EditTodoForm";
 import { toggleTodoStatus, deleteTodo } from "../../redux/slices/todosSlice";
 import { memo } from "react";
-const TodoItem = ({ id, name, completed }: TodoProps) => {
+const TodoItem :React.FC<TodoProps> = ({ id, name, completed }) => {
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
