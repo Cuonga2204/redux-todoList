@@ -67,7 +67,7 @@ const FilterTodoList = () => {
             value={FILTER_STATUSES.COMPLETED}
             checked={filterStatus === FILTER_STATUSES.COMPLETED}
             onChange={handleStatusChange}
-            containerClassName="flex items-center gap-4"
+            containerClassName="flex items-center gap-2"
             label="Completed"
           />
           <Radio
@@ -76,7 +76,7 @@ const FilterTodoList = () => {
             value={FILTER_STATUSES.TODO}
             checked={filterStatus === FILTER_STATUSES.TODO}
             onChange={handleStatusChange}
-            containerClassName="flex items-center gap-4"
+            containerClassName="flex items-center gap-2"
             label="To do"
           />
         </div>
