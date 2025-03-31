@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { todoRemainingSelector } from "../../redux/selectors";
 import AddTodoForm from "../AddTodoForm/AddTodoForm";
 import { memo } from "react";
+
 const TodoList = () => {
   const todoList = useSelector(todoRemainingSelector);
 

@@ -1,6 +1,7 @@
 import "./App.css";
 import FilterTodoList from "./components/FilterTodoList/FilterTodoList";
 import TodoList from "./components/TodoList/TodoList";
+
 function App() {
   return (
     <div className="w-[500px] h-[90vh] bg-white mx-auto my-0 p-5 rounded-md shadow-2xl mb-5">
