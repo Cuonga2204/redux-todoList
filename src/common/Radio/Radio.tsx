@@ -1,5 +1,16 @@
 import React from "react";
-import { RadioProps } from "../../types/todo.types";
+
+export interface RadioProps {
+  id?: string;
+  value?: string;
+  name?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+  checked?: boolean;
+  containerClassName?: string;
+  label: string;
+}
+
 const Radio: React.FC<RadioProps> = ({
   id,
   name,
@@ -9,7 +20,6 @@ const Radio: React.FC<RadioProps> = ({
   containerClassName,
   label,
 }) => {
-  
   return (
     <div className={containerClassName}>
       <input

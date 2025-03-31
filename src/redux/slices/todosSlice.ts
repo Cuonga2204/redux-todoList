@@ -5,11 +5,14 @@ import { PayLoadEditTodo } from "../../types/todo.types";
 const saveTodosLocalStorage = (Todos: Todo[]) => {
   localStorage.setItem("todos", JSON.stringify(Todos));
 };
+
 const loadTodosLocalStorage = (): Todo[] => {
   const storedTodos = localStorage.getItem("todos");
   return storedTodos ? JSON.parse(storedTodos) : [];
 };
+
 const initialState: Todo[] = loadTodosLocalStorage();
+
 const todoSlice = createSlice({
   name: "todoList",
   initialState,
@@ -48,4 +51,5 @@ const todoSlice = createSlice({
 
 export const { addTodo, toggleTodoStatus, editTodo, deleteTodo } =
   todoSlice.actions;
+
 export default todoSlice.reducer;

@@ -1,8 +1,20 @@
-import React from 'react'
-import { ButtonProps } from '../../types/todo.types'
-import { memo } from 'react';
- const Button:React.FC<ButtonProps> = ({onClick, disabled=false, className, children}) => {
-    return (
+import React from "react";
+import { memo } from "react";
+
+export interface ButtonProps {
+  onClick?: () => void;
+  disabled?: boolean;
+  children: React.ReactNode;
+  className?: string;
+}
+
+const Button: React.FC<ButtonProps> = ({
+  onClick,
+  disabled = false,
+  className,
+  children,
+}) => {
+  return (
     <button
       onClick={onClick}
       disabled={disabled}
@@ -12,6 +24,6 @@ import { memo } from 'react';
     >
       {children}
     </button>
-  )
-}
+  );
+};
 export default memo(Button);

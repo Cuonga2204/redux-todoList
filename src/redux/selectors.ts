@@ -6,7 +6,7 @@ export const searchTextSelector = (state: StateStore) => state.filters.search;
 export const filterStatusSelector = (state: StateStore) => state.filters.status;
 export const todoListSelector = (state: StateStore) => state.todoList;
 
-export const todoRemainingSlector = createSelector(
+export const todoRemainingSelector = createSelector(
   todoListSelector,
   searchTextSelector,
   filterStatusSelector,

@@ -1,9 +1,10 @@
 import TodoItem from "../TodoItem/TodoItem";
 import { useSelector } from "react-redux";
-import { todoRemainingSlector } from "../../redux/selectors";
-import { AddTodoForm } from "../AddTodoForm/AddTodoForm";
-export const TodoList = () => {
-  const todoList = useSelector(todoRemainingSlector);
+import { todoRemainingSelector } from "../../redux/selectors";
+import AddTodoForm from "../AddTodoForm/AddTodoForm";
+import { memo } from "react";
+const TodoList = () => {
+  const todoList = useSelector(todoRemainingSelector);
 
   return (
     <div className="h-90 flex flex-col justify-between">
@@ -21,3 +22,4 @@ export const TodoList = () => {
     </div>
   );
 };
+export default memo(TodoList);

@@ -55,7 +55,6 @@ const FilterTodoList = () => {
             id="all"
             name="status"
             containerClassName="flex items-center space-x-2"
-            inputClassName="accent-blue-500"
             value={FILTER_STATUSES.ALL}
             checked={filterStatus === FILTER_STATUSES.ALL}
             onChange={handleStatusChange}

@@ -1,25 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { TodoProps } from "../../types/todo.types";
+import { Todo } from "../../types/todo.types";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { EditTodoForm } from "../EditTodoForm/EditTodoForm";
+import EditTodoForm from "../EditTodoForm/EditTodoForm";
 import { toggleTodoStatus, deleteTodo } from "../../redux/slices/todosSlice";
 import { memo } from "react";
-const TodoItem :React.FC<TodoProps> = ({ id, name, completed }) => {
+const TodoItem: React.FC<Todo> = ({ id, name, completed }) => {
   const dispatch = useDispatch();
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
-  const handleCheckboxChange = (): void => {
+  const handleCheckboxChange = () => {
     dispatch(toggleTodoStatus(id));
     setIsEditing(false);
   };
 
-  const handleDelete = (): void => {
+  const handleDelete = () => {
     dispatch(deleteTodo(id));
   };
 
-  const handleEditToggle = (): void => {
+  const handleEditToggle = () => {
     setIsEditing(true);
   };
 

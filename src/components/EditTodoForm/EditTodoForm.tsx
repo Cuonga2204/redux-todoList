@@ -1,10 +1,17 @@
-import  Input  from "../../common/Input/Input";
+import Input from "../../common/Input/Input";
 import Button from "../../common/Button/Button";
 import { useCallback, useState } from "react";
-import { EditTodoFormProps } from "../../types/todo.types";
 import { useDispatch } from "react-redux";
 import { editTodo } from "../../redux/slices/todosSlice";
-export const EditTodoForm: React.FC<EditTodoFormProps> = ({
+import { memo } from "react";
+
+export interface EditTodoFormProps {
+  id: string;
+  name: string;
+  setIsEditing: (isEditing: boolean) => void;
+}
+
+const EditTodoForm: React.FC<EditTodoFormProps> = ({
   id,
   name,
   setIsEditing,
@@ -17,6 +24,7 @@ export const EditTodoForm: React.FC<EditTodoFormProps> = ({
       setIsEditing(false);
     }
   }, [dispatch, editedName, id, setIsEditing]);
+
   return (
     <>
       <Input
@@ -33,3 +41,5 @@ export const EditTodoForm: React.FC<EditTodoFormProps> = ({
     </>
   );
 };
+
+export default memo(EditTodoForm);

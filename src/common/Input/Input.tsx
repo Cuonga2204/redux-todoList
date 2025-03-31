@@ -1,6 +1,15 @@
 import React from "react";
-import { InputProps } from "../../types/todo.types";
 import { memo } from "react";
+
+export interface InputProps {
+  id?: string;
+  value?: string;
+  name?: string;
+  placeholder?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+}
+
 const Input: React.FC<InputProps> = ({
   id,
   name,
@@ -9,7 +18,6 @@ const Input: React.FC<InputProps> = ({
   onChange,
   className,
 }) => {
-
   return (
     <input
       type="text"
